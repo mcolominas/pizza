@@ -8,16 +8,16 @@
   </head>
   <body>
     <?php
-    include "ingredientes.php";
-    include "funciones.php";
+      include "ingredientes.php";
+      include "funciones.php";
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
-      if(isset($_POST['ingredientes']))
-        generarPedido($_POST['ingredientes']);
+      if($_SERVER['REQUEST_METHOD'] == 'POST')
+        if(isset($_POST['ingredientes']))
+          generarPedido($_POST['ingredientes']);
+        else
+          generarPedido();
       else
-        generarPedido();
-    else
-      generarFormulario();
+        generarFormulario();
     ?>
   </body>
 </html>
